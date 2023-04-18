@@ -1,3 +1,3 @@
 # ezen_javascript_pj
 
-# [link here!!](https://clyzen.github.io/ezen_javascript_pj/){:target="_blank"}
+# <a href="https://clyzen.github.io/ezen_javascript_pj/" traget="_blank">link here!!</a>
