@@ -105,9 +105,9 @@ function top_ratedMovie() {
       var results = data.results
       for (const result of results) {
         var movieId = result.id
-        console.log(result)
+        // console.log(result)
         var poster_path = result.poster_path;
-        console.log(poster_path)
+        // console.log(poster_path)
 
         $(".toprated_poster").append(`<swiper-slide><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></swiper-slide>`);
         
@@ -132,9 +132,9 @@ function upcomingMovie() {
       var results = data.results
       for (const result of results) {
         var movieId = result.id
-        console.log(result)
+        // console.log(result)
         var poster_path = result.poster_path;
-        console.log(poster_path)
+        // console.log(poster_path)
 
         $(".upcoming_poster").append(`<swiper-slide><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></swiper-slide>`);
         
