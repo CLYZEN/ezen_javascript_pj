@@ -6,6 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #090626;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    </style>
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/fontawesome.css" />
     <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/brands.css" />
@@ -61,67 +83,45 @@
                     <section class="trailer_section">
                         <div class="trailer_div">
                             <h1>트레일러</h1>
-                            <!-- Bootstrap Slide Start -->
-                            <div id="carouselExampleIndicators" class="carousel slide">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="0" class="active" aria-current="true"
-                                        aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                </div>
-                                <!-- ifram class : d-block w-100 -->
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
+                            <hr>
+                            <!-- swiper slide -->
+                            <swiper-container class="mySwiper" navigation="true">
 
-                                    </div>
-                                    <div class="carousel-item">
-
-                                    </div>
-                                    <div class="carousel-item">
-
-                                    </div>
-                                    <div class="carousel-item">
-
-                                    </div>
-                                    <div class="carousel-item">
-
-                                    </div>
-                                    <div class="carousel-item">
-
-                                    </div>
-                                    <div class="carousel-item">
-
-                                    </div>
-                                    <div class="carousel-item">
-
-                                    </div>
-                                    <div class="carousel-item">
-
-                                    </div>
-                                    <div class="carousel-item">
-
-                                    </div>
-
-                                </div>
-                                <button class="carousel-control-prev" type="button"
-                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            <!-- Bootstrap Slide End -->
+                            </swiper-container>
+                            <hr>
                         </div>
                     </section>
                     <section class="poster_section">
+                        <div class="container row">
+                            <div class="col-md-3">
+                                <a href="./populer.html"><h3>현재 인기순</h3></a>
+                                <hr>
+                                <swiper-container class="mySwiper populer_poster" navigation="true">
 
+                                </swiper-container>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="./now_playing.html"><h3>현재 상영중</h3></a>
+                                <hr>
+                                <swiper-container class="mySwiper nowplaying_poster" navigation="true">
+
+                                </swiper-container>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="./top_rateed.html"><h3>최고평점</h3></a>
+                                <hr>
+                                <swiper-container class="mySwiper toprated_poster" navigation="true">
+
+                                </swiper-container>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="./upcoming.html"><h3>개봉 예정</h3></a>
+                                <hr>
+                                <swiper-container class="mySwiper upcoming_poster" navigation="true">
+
+                                </swiper-container>
+                            </div>
+                        </div>
                     </section>
                 </div>
                 <div class="col-md-2"></div>
@@ -135,6 +135,15 @@
             </div>
         </footer>
     </div>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop : true,
+            loopAdditionalSlides: 1
+        });
+
+    </script>
     <!-- js -->
     <script src="./js/index.js"></script>
 </body>
