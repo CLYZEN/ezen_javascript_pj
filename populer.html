@@ -2,9 +2,9 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/fontawesome.css" />
@@ -19,10 +19,10 @@
         crossorigin="anonymous"></script>
     <!-- Google Font -->
     <!-- font-weight 100 300 400 500 700 900 사용가능 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <!-- CSS Load -->
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/populer.css" />
@@ -33,22 +33,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- 요소에 data-include-path="#" 추가 시 해당 경로의 html 요소만 불러옴 header footer 사용-->
     <!-- <script>
-        window.addEventListener('load', function () {
-            var allElements = document.getElementsByTagName('*');
-            Array.prototype.forEach.call(allElements, function (el) {
-                var includePath = el.dataset.includePath;
-                if (includePath) {
-                    var xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function () {
-                        if (this.readyState == 4 && this.status == 200) {
-                            el.outerHTML = this.responseText;
-                        }
-                    };
-                    xhttp.open('GET', includePath, true);
-                    xhttp.send();
-                }
-            });
+      window.addEventListener("load", function () {
+        var allElements = document.getElementsByTagName("*");
+        Array.prototype.forEach.call(allElements, function (el) {
+          var includePath = el.dataset.includePath;
+          if (includePath) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+              if (this.readyState == 4 && this.status == 200) {
+                el.outerHTML = this.responseText;
+              }
+            };
+            xhttp.open("GET", includePath, true);
+            xhttp.send();
+          }
         });
+      });
     </script> -->
     <div class="wrap">
         <header id="header">
@@ -99,49 +99,15 @@
         </header>
         <main>
             <div class="container row main_wrap">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
+                <div class="col-md-10">
                     <div>
-                        <!-- main content here !! -->
-                        <!-- <div class="images"></div>
-                        <h2 class="title"></h2> -->
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
+                        <h2 class="title">인기영화</h2>
+                        <div class="row">
+                            <div class="movie-list">
+                                <div class="images"></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-2"></div>
-            </div>
         </main>
         <footer id="footer">
             <div class="container row">
@@ -157,7 +123,7 @@
         </footer>
     </div>
     <!-- js -->
-    <script src="./js/index.js"></script>
+    <script src="./js/populer.js"></script>
 </body>
 
 </html>

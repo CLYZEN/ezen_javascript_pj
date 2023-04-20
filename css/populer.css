@@ -1,1 +1,23 @@
 @charset "utf-8";
+
+.movie-img {
+  margin: -10px;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+}
+
+.images img {
+  width: 150px !important;
+  margin: 30px;
+}
+
+.card {
+  margin: 19px;
+}
