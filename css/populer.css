@@ -14,6 +14,11 @@
 }
 
 .images img {
-  width: 170px !important;
+  width: 130px !important;
   margin: 30px;
+}
+
+.card {
+  margin: 19px;
+  background-color: rgb(186, 187, 188);
 }

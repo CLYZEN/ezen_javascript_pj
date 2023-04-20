@@ -21,8 +21,8 @@ function getPopularMoive() {
 
         // img
         $(".images").append(
-          `<div class="movie-img"><a href = "./detail.html?id=${result.id}"><img src="${imgURL}"></a>
-          <div class="movie-title"><p>${result.title}<br>개봉일:${result.release_date}</p></div>
+          `<div class="card"><div class="movie-img"><a href = "./detail.html?id=${result.id}"><img src="${imgURL}"></a>
+          <div class="movie-title"><p>${result.title}<br>${result.release_date}</p></div></div>
           </div>
           `
         );
