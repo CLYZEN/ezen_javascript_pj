@@ -30,6 +30,10 @@
   margin-top: 30%;
 }
 
+.bottom {
+  position: absolute;
+  bottom: 20px;
+}
 .popularity {
   margin-left: 20px;
 }
