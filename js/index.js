@@ -23,7 +23,7 @@ function getPopularMoive() {
         // console.log(poster_path)
 
         $(".populer_poster").append(
-          `<swiper-slide><a href="./detail.html?id=${movieId}"><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></a></swiper-slide>`
+          `<swiper-slide><a href="./detail.html?id=${movieId}" target="_blank"><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></a></swiper-slide>`
         )
         function getMovieVideo() {
           var VideokeyURL = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=8e7d2baf58a031cf34c92d428e1f6df7&language=ko-KR`
@@ -87,7 +87,7 @@ function getNowPlayingMovie() {
         // console.log(poster_path)
 
         $(".nowplaying_poster").append(
-          `<swiper-slide><a href="./detail.html?id=${movieId}"><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></a></swiper-slide>`
+          `<swiper-slide><a href="./detail.html?id=${movieId}" target="_blank"><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></a></swiper-slide>`
         )
       }
     },
@@ -116,7 +116,7 @@ function top_ratedMovie() {
         // console.log(poster_path)
 
         $(".toprated_poster").append(
-          `<swiper-slide><a href="./detail.html?id=${movieId}"><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></a></swiper-slide>`
+          `<swiper-slide><a href="./detail.html?id=${movieId}" target="_blank"><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></a></swiper-slide>`
         )
       }
     },
@@ -145,7 +145,7 @@ function upcomingMovie() {
         // console.log(poster_path)
 
         $(".upcoming_poster").append(
-          `<swiper-slide><a href="./detail.html?id=${movieId}"><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></a></swiper-slide>`
+          `<swiper-slide><a href="./detail.html?id=${movieId}" target="_blank"><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></a></swiper-slide>`
         )
       }
     },
