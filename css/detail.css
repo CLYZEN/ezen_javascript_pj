@@ -3,3 +3,26 @@
 .container {
   margin: 0 auto;
 }
+
+.main_card {
+  width: 1000px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.language {
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.card-body > span {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.vote_average {
+  margin-top: 30%;
+}

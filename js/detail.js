@@ -25,20 +25,22 @@ function getMoiveDetail() {
       $(".images").append(
         `<a href="./detail2.html?id=${data.id}"><img src="${imgURL}"></a>`
       );
-      const title = data.original_title;
+      const title = data.title;
       const language = data.original_language;
       const release_date = data.release_date;
       const overview = data.overview;
       const vote_average = data.vote_average;
       const vote_count = data.vote_count;
+
       $(".title").text(`${title}`);
-      $(".language").text(`${language}`);
-      $(".release_date").text(`${release_date}`);
+      $(".language").text(`개봉일(언어) :  ${release_date} (${language})`);
+
       $(".overview").text(`${overview}`);
-      $(".vote_average").text(`${vote_average}`);
-      $(".vote_count").text(`${vote_count}`);
+      $(".vote_average").text(
+        `평점 : ${vote_average} / 투표인원 : ${vote_count} `
+      );
     },
-    error: function (request, status, error) {
+    error: function (request, error) {
       console.log("code:" + request.status);
       console.log("message:" + request.responseText);
       console.log("error:" + error);
