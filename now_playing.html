@@ -99,48 +99,14 @@
         </header>
         <main>
             <div class="container row main_wrap">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <div>
-                        <!-- main content here !! -->
-                        <!-- <div class="images"></div>
-                        <h2 class="title"></h2> -->
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti in odit eaque, labore
-                        dignissimos officiis, molestias, incidunt ab deserunt dolores qui. Harum doloribus facere dicta
-                        voluptate omnis alias neque veritatis?
-                    </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                        <div class=""><h2>현재 상영중인 영화</h2></div>
+                        <ol class="images">
+                          <!-- <div class="sec"></div> -->
+                        </ol>
                 </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-1"></div>
             </div>
         </main>
         <footer id="footer">
@@ -158,6 +124,48 @@
     </div>
     <!-- js -->
     <script src="./js/now_playing.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      const movieURL =
+        "https://api.themoviedb.org/3/movie/now_playing?api_key=94b352943d5fd796727f0812147d7452&language=ko-KR&page=1";
+      $.ajax({
+        type: "GET",
+        url: movieURL,
+        dataType: "json",
+        async: false,
+        success: function (data) {
+          const results = data.results;
+          console.log("영화 목록", results);
+
+          for (const result of results) {
+            console.log("영화제목 : ", result.title);
+            console.log("영화설명 : ", result.overview);
+            console.log("평점 : ", result.vote_average);
+            console.log("포스터 : ", result.poster_path);
+
+            let imgURL = "https://image.tmdb.org/t/p/w500" + result.poster_path;
+            // $(".images .sec").append(
+            //   `<a href="./detail.html?id=${result.id}"><img src="${imgURL}"></a>`
+            // );
+            // $(".images .sec").append(`<p>${result.title}</p>`);
+
+            $(".images").append(
+              `<li class="sec">
+                <div class="movie_list">
+                <a href="./detail.html?id=${result.id}"></a>
+                <img src="${imgURL}">
+                <div class="movie_title"><span class="title_nm">${result.overview}</span></div><p>${result.title}</p>
+                <div></li>`
+            );
+          }
+        },
+        error: function (request, status, error) {
+          console.log("code:" + request.status);
+          console.log("message:" + request.responseText);
+          console.log("error:" + error);
+        },
+      });
+    </script>
 </body>
 
 </html>
