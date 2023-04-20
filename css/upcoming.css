@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.wrap {
+  background-color: rgb(33, 37, 41);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  color: #ffffff;
+  margin: 20px;
+  background-color: rgb(60, 62, 65);
+  text-align: center;
+}
