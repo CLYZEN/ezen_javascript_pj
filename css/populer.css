@@ -11,13 +11,58 @@
   align-items: center;
   text-align: center;
   font-size: 12px;
+  font-weight: bold;
 }
 
 .images img {
-  width: 150px !important;
-  margin: 30px;
+  width: 180px !important;
+  margin: 20px;
 }
 
-.card {
-  margin: 19px;
+body {
+  margin: 0;
+}
+
+figure {
+  transition: opacity 0.2s;
+  position: relative;
+  margin: 0;
+}
+
+figure figcaption {
+  color: #fff;
+  bottom: 70px;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  width: 160px;
+  height: 150px;
+  transition: all 0.3s ease;
+  margin: 25px;
+}
+
+figure .gallery-img {
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+  overflow: hidden;
+}
+
+figure:hover .gallery-img {
+  background-color: #000;
+}
+
+figure:hover img {
+  transform: scale(1.1, 1.1);
+  transition: all 0.3s ease;
+  opacity: 0.15;
+  cursor: url("https://hcode.b-cdn.net/wp-content/themes/h-code/assets/images/icon-zoom-white.png"),
+    pointer;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+  transition: all 0.3s ease;
 }

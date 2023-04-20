@@ -21,17 +21,11 @@ function getPopularMoive() {
 
         // img
         $(".images").append(
-          `<div class="movie-img card"><a href = "./detail.html?id=${result.id}"><img src="${imgURL}"></a>
-          <div class="movie-title"><p>${result.title}<br>${result.release_date}</p></div></div>
+          `<figure class="movie-img "><a href = "./detail.html?id=${result.id}"><img src="${imgURL}"></a>
+          <div class="movie-title"><p>${result.title}<br>${result.release_date}</p></div><figcaption><span>${result.overview}</span></figcaption></figure>
           
           `
         );
-
-        $(function () {
-          $(".images").on("mouseover focus", function () {});
-        });
-
-        // $(".movie-img").append(`<div class="contents"><p >제목</p></div>`);
       }
     },
     error: function (request, status, error) {
