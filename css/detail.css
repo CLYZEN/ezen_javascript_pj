@@ -18,6 +18,9 @@
   margin-bottom: 30px;
 }
 
+.tagline {
+  font-style: italic;
+}
 .card-body > span {
   font-weight: bold;
   font-size: 30px;
