@@ -1,7 +1,7 @@
-document.cookie = "safeCookie1=foo; SameSite=Lax"; 
-document.cookie = "safeCookie2=foo"; 
-document.cookie = "crossCookie=bar; SameSite=None; Secure";
-// 인기있는 영화 
+document.cookie = "safeCookie1=foo; SameSite=Lax"
+document.cookie = "safeCookie2=foo"
+document.cookie = "crossCookie=bar; SameSite=None; Secure"
+// 인기있는 영화
 function getPopularMoive() {
   var temp = {}
   var movieUrlAPI =
@@ -17,11 +17,14 @@ function getPopularMoive() {
       var results = data.results
       for (const result of results) {
         var movieId = result.id
+
         // console.log(result)
-        var poster_path = result.poster_path;
+        var poster_path = result.poster_path
         // console.log(poster_path)
 
-        $(".populer_poster").append(`<swiper-slide><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></swiper-slide>`);
+        $(".populer_poster").append(
+          `<swiper-slide><a href="./detail.html?id=${movieId}"><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></a></swiper-slide>`
+        )
         function getMovieVideo() {
           var VideokeyURL = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=8e7d2baf58a031cf34c92d428e1f6df7&language=ko-KR`
           $.ajax({
@@ -36,7 +39,7 @@ function getPopularMoive() {
                 let videoURL = "https://www.youtube.com/embed/" + result.key
                 trailerKey.url = videoURL
 
-                  $(".trailer_div > .mySwiper").append(`
+                $(".trailer_div > .mySwiper").append(`
                   <swiper-slide>
                     <iframe width="640px" height="360px"
                     src="${videoURL}"
@@ -68,7 +71,8 @@ function getPopularMoive() {
 }
 // 현재 상영중인 영화
 function getNowPlayingMovie() {
-  var NowPlayingURL = "https://api.themoviedb.org/3/movie/now_playing?api_key=8e7d2baf58a031cf34c92d428e1f6df7&language=ko-KR&page=1&region=KR"
+  var NowPlayingURL =
+    "https://api.themoviedb.org/3/movie/now_playing?api_key=8e7d2baf58a031cf34c92d428e1f6df7&language=ko-KR&page=1&region=KR"
   $.ajax({
     type: "GET",
     url: NowPlayingURL,
@@ -79,11 +83,12 @@ function getNowPlayingMovie() {
       for (const result of results) {
         var movieId = result.id
         // console.log(result)
-        var poster_path = result.poster_path;
+        var poster_path = result.poster_path
         // console.log(poster_path)
 
-        $(".nowplaying_poster").append(`<swiper-slide><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></swiper-slide>`);
-        
+        $(".nowplaying_poster").append(
+          `<swiper-slide><a href="./detail.html?id=${movieId}"><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></a></swiper-slide>`
+        )
       }
     },
     error: function (request, status, error) {
@@ -95,7 +100,8 @@ function getNowPlayingMovie() {
 }
 // 최고평점 영화
 function top_ratedMovie() {
-  var top_ratedURL = "https://api.themoviedb.org/3/movie/top_rated?api_key=8e7d2baf58a031cf34c92d428e1f6df7&language=ko-KR&page=1&region=KR"
+  var top_ratedURL =
+    "https://api.themoviedb.org/3/movie/top_rated?api_key=8e7d2baf58a031cf34c92d428e1f6df7&language=ko-KR&page=1&region=KR"
   $.ajax({
     type: "GET",
     url: top_ratedURL,
@@ -106,11 +112,12 @@ function top_ratedMovie() {
       for (const result of results) {
         var movieId = result.id
         // console.log(result)
-        var poster_path = result.poster_path;
+        var poster_path = result.poster_path
         // console.log(poster_path)
 
-        $(".toprated_poster").append(`<swiper-slide><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></swiper-slide>`);
-        
+        $(".toprated_poster").append(
+          `<swiper-slide><a href="./detail.html?id=${movieId}"><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></a></swiper-slide>`
+        )
       }
     },
     error: function (request, status, error) {
@@ -122,7 +129,8 @@ function top_ratedMovie() {
 }
 // 개봉예정 영화
 function upcomingMovie() {
-  var upcomingURL = "https://api.themoviedb.org/3/movie/upcoming?api_key=8e7d2baf58a031cf34c92d428e1f6df7&language=ko-KR&page=1&region=KR"
+  var upcomingURL =
+    "https://api.themoviedb.org/3/movie/upcoming?api_key=8e7d2baf58a031cf34c92d428e1f6df7&language=ko-KR&page=1&region=KR"
   $.ajax({
     type: "GET",
     url: upcomingURL,
@@ -133,11 +141,12 @@ function upcomingMovie() {
       for (const result of results) {
         var movieId = result.id
         // console.log(result)
-        var poster_path = result.poster_path;
+        var poster_path = result.poster_path
         // console.log(poster_path)
 
-        $(".upcoming_poster").append(`<swiper-slide><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></swiper-slide>`);
-        
+        $(".upcoming_poster").append(
+          `<swiper-slide><a href="./detail.html?id=${movieId}"><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></a></swiper-slide>`
+        )
       }
     },
     error: function (request, status, error) {
@@ -147,7 +156,7 @@ function upcomingMovie() {
     },
   })
 }
-getPopularMoive();
-getNowPlayingMovie();
-top_ratedMovie();
-upcomingMovie();
+getPopularMoive()
+getNowPlayingMovie()
+top_ratedMovie()
+upcomingMovie()
