@@ -31,7 +31,7 @@
 <body>
     <!-- 제이쿼리 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script>
+    <!-- <script>
         window.addEventListener('load', function () {
             var allElements = document.getElementsByTagName('*');
             Array.prototype.forEach.call(allElements, function (el) {
@@ -48,10 +48,53 @@
                 }
             });
         });
-    </script>
+    </script> -->
     <div class="wrap">
         <header id="header">
-            <div data-include-path="./header.html"></div>
+            <nav class="navbar navbar-dark bg-dark fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html"><img src="./images/header_logo.svg" alt="logo"
+                            width="150" /></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                        aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                            </h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <h2>
+                                        분류
+                                    </h2>
+                                </li>
+                                <li class="nav-item">
+                                    <hr />
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="./populer.html">인기순</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./top_rated.html">평점순</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./now_playing.html">현재 상영중</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./upcoming.html">개봉 예정</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </header>
         <main>
             <div class="container row">
@@ -64,6 +107,7 @@
                             <h2 class="title"></h2> -->
                             <div class="card mb-3 main_card" style="height: 100%;">
                                 <div class="row g-0">
+<<<<<<< HEAD
                                   <div class="col-md-5 images">
                                   </div>
                                   <div class="col-md-7" style="padding-left: 120px;">
@@ -75,17 +119,40 @@
                                      
                                       <p class="card-text vote_average">평점</p>
                                     
+=======
+                                    <div class="col-md-4 img">
                                     </div>
-                                  </div>
+                                    <div class="col-md-7" style="padding-left: 20px;">
+                                        <div class="card-body">
+                                            <p class="card-title title">영화제목</p>
+                                            <p class="card-title language">언어</p>
+                                            <p class="card-title release_date">개봉일</p>
+                                            <p class="card-text overview">내용</p>
+                                            <p class="card-text vote_average"><small
+                                                    class="text-body-secondary">평점</small></p>
+                                            <p class="card-text vote_count"><small class="text-body-secondary">투표
+                                                    인원</small></p>
+                                        </div>
+>>>>>>> 9a4ede77266baf2e3ea1f06f936aaa982e27f578
+                                    </div>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-2"></div>
                 </div>
-        </main>  
+        </main>
         <footer id="footer">
-            <div data-include-path="./footer.html"></div>
+            <div class="container row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <span>
+                        Ezen 1조 <br>
+                        박승철 | 고재혁 | 김경원 | 천연수 | 장정호 | 허재용
+                    </span>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
         </footer>
     </div>
     <!-- js -->
