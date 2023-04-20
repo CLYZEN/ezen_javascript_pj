@@ -19,24 +19,25 @@ function getMoiveDetail() {
       console.log(data);
 
       let imgURL = "https://image.tmdb.org/t/p/w500" + data.poster_path;
-      $(".images").append(
-        `<a href="./detail2.html?id=${data.id}"><img src="${imgURL}"></a>`
-      );
+      $(".images").append(`<img src="${imgURL}">`);
       const title = data.title;
       const language = data.original_language;
       const release_date = data.release_date;
+      const runtime = data.runtime;
       const tagline = data.tagline;
       const overview = data.overview;
       const vote_average = data.vote_average;
       const vote_count = data.vote_count;
-
+      const popularity = data.popularity;
       $(".title").text(`${title}`);
       $(".language").text(`개봉일(언어) :  ${release_date} (${language})`);
+      $(".runtime").text(`상영시간 : ${runtime}m`);
       $(".tagline").text(`${tagline}`);
       $(".overview").text(`${overview}`);
       $(".vote_average").text(
         `평점 : ${vote_average} / 투표인원 : ${vote_count} `
       );
+      $(".popularity").text(`${popularity}`);
     },
     error: function (request, error) {
       console.log("code:" + request.status);
