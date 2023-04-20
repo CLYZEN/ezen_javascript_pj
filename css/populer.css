@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+.movie-img {
+  margin: -10px;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.movie-title {
+  margin-top: 10px;
+}
+
+.card {
+  background-color: rgba(206, 201, 201, 0.968);
+}
+
+.section_main {
+  width: 180px;
+  margin: 20px;
+}
+
+.images img {
+  width: 180px !important;
+}
+
+body {
+  margin: 0;
+}
+
+figure {
+  transition: opacity 0.2s;
+  position: relative;
+  margin: 0;
+}
+
+figure figcaption {
+  color: #1b1818;
+  bottom: 70px;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  width: 160px;
+  height: 150px;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+figure .gallery-img {
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+  overflow: hidden;
+}
+
+figure:hover .gallery-img {
+  background-color: #000;
+}
+
+figure:hover img {
+  transform: scale(1.1, 1.1);
+  transition: all 0.3s ease;
+  opacity: 0.15;
+  cursor: url("https://hcode.b-cdn.net/wp-content/themes/h-code/assets/images/icon-zoom-white.png"),
+    pointer;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+  transition: all 0.3s ease;
+}

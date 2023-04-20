@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.container {
+  margin: 0 auto;
+}
+
+.main_card {
+  width: 1000px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.language {
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.tagline {
+  font-style: italic;
+}
+.card-body > span {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.vote_average {
+  margin-top: 30%;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 20px;
+}
+.popularity {
+  margin-left: 20px;
+}
