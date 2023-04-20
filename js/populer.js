@@ -21,7 +21,7 @@ function getPopularMoive() {
 
         // img
         $(".images").append(
-          `<figure class="movie-img "><a href = "./detail.html?id=${result.id}"><img src="${imgURL}"></a>
+          `<figure class="movie-img  "><a href = "./detail.html?id=${result.id}"><img src="${imgURL}" class="card"></a>
           <div class="movie-title"><p>${result.title}<br>${result.release_date}</p></div><figcaption><span>${result.overview}</span></figcaption></figure>
           
           `
