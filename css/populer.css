@@ -14,9 +14,21 @@
   font-weight: bold;
 }
 
+.movie-title {
+  margin-top: 10px;
+}
+
+.card {
+  background-color: rgba(206, 201, 201, 0.968);
+}
+
+.section_main {
+  width: 180px;
+  margin: 20px;
+}
+
 .images img {
   width: 180px !important;
-  margin: 20px;
 }
 
 body {
@@ -30,7 +42,7 @@ figure {
 }
 
 figure figcaption {
-  color: #fff;
+  color: #1b1818;
   bottom: 70px;
   opacity: 0;
   position: absolute;
@@ -41,7 +53,7 @@ figure figcaption {
   width: 160px;
   height: 150px;
   transition: all 0.3s ease;
-  margin: 25px;
+  margin: 10px;
 }
 
 figure .gallery-img {
