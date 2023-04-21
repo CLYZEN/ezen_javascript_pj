@@ -13,28 +13,28 @@ ol {
 }
 
 .images > .sec {
-  width: 180px;
-  height: 350px;
+  width: 200px;
+  height: 390px;
   padding-left: 10px;
 }
 
 .movie_list {
   width: 180px;
+  height: 390px;
 }
 
-.images > .sec > .movie_list > img {
+.images > .sec > .movie_list > .movie_img > img {
   width: 180px !important;
   height: 280px !important;
   /* position: relative; */
 }
 
-.images > .sec > .movie_list > a {
+/* .images > .sec > .movie_list > .movie_img > a {
   display: flex;
   justify-content: center;
-  /* width: 200px; */
-  padding-top: 50px;
-  height: 20px;
-}
+  width: 200px;
+  height: 100%;
+} */
 
 .images > .sec > .movie_list > p {
   text-align: center;
@@ -48,25 +48,25 @@ ol {
   /* top: 0; */
   /* z-index: -1; */
   width: 180px;
-  height: 280px;
+  height: 0px;
   color: #fff;
   opacity: 0;
-  
 }
 
-.movie_title > .title_nm {
+.movie_title > a > .title_nm {
   position: absolute;
-  display: block;
+  /* display: block; */
   width: 180px;
   height: 280px;
   padding: 20px;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
   top: -280px;
-  /* width: 240px; */
+  flex-wrap: wrap;
+  text-overflow: clip;
 }
 
 .movie_title:hover {
