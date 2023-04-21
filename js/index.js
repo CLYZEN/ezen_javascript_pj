@@ -17,11 +17,12 @@ function getPopularMoive() {
       var results = data.results
       for (const result of results) {
         var movieId = result.id
+        temp.movieID = movieId
 
         // console.log(result)
         var poster_path = result.poster_path
         // console.log(poster_path)
-
+        // console.log(movieId)
         $(".populer_poster").append(
           `<swiper-slide><a href="./detail.html?id=${movieId}" target="_blank"><img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="populer_poster"></a></swiper-slide>`
         )
@@ -67,6 +68,7 @@ function getPopularMoive() {
       console.log("error:" + error)
     },
   })
+  // console.log(temp)
   return temp
 }
 // 현재 상영중인 영화
