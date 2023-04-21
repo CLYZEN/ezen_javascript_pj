@@ -4,6 +4,10 @@
   margin: -10px;
 }
 
+.average {
+  font-family: ;
+}
+
 .images {
   display: flex;
   justify-content: center;
@@ -37,6 +41,18 @@ body {
   margin: 0;
 }
 
+.average {
+  border: 3px solid rgb(12, 252, 184);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  line-height: 25px;
+  background-color: rgb(12, 252, 184);
+  color: black;
+  position: absolute;
+}
+
 figure {
   transition: opacity 0.2s;
   position: relative;
@@ -62,7 +78,7 @@ figure .gallery-img {
 }
 
 figure:hover .gallery-img {
-  background-color: #000;
+  background-color: #121111;
 }
 
 figure:hover img {
