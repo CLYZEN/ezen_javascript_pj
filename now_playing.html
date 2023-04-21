@@ -177,6 +177,12 @@
             // );
             // $(".images .sec").append(`<p>${result.title}</p>`);
 
+            let overview = result.overview;
+
+            if (overview.length >= 75) {
+              overview = result.overview.substring(1, 75) + "...";
+            }
+
             $(".images").append(
               `<li class="sec">
                 <div class="movie_list">
@@ -185,7 +191,7 @@
                 </div>
                 <div class="movie_title">
                 <a href="./detail.html?id=${result.id}">
-                    <span class="title_nm">${result.overview}</span>
+                    <p class="title_nm">${overview}</p>
                 </a></div><p>${result.title}</p>
                 </div></li>`
             );

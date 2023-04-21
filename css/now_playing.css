@@ -27,14 +27,8 @@ ol {
   width: 180px !important;
   height: 280px !important;
   /* position: relative; */
+  border-radius: 10px;
 }
-
-/* .images > .sec > .movie_list > .movie_img > a {
-  display: flex;
-  justify-content: center;
-  width: 200px;
-  height: 100%;
-} */
 
 .images > .sec > .movie_list > p {
   text-align: center;
@@ -47,15 +41,15 @@ ol {
   /* left: 0; */
   /* top: 0; */
   /* z-index: -1; */
-  width: 180px;
-  height: 0px;
+  /* width: 180px; */
+  height: 280px;
   color: #fff;
   opacity: 0;
 }
 
 .movie_title > a > .title_nm {
   position: absolute;
-  /* display: block; */
+  display: block;
   width: 180px;
   height: 280px;
   padding: 20px;
@@ -66,12 +60,10 @@ ol {
   /* white-space: nowrap; */
   top: -280px;
   flex-wrap: wrap;
-  text-overflow: clip;
 }
 
 .movie_title:hover {
   color: #fff;
   text-decoration: none;
-  /* outline: 1px dotted #000; */
   opacity: 100;
 }
