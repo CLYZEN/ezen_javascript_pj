@@ -18,11 +18,20 @@ function getPopularMoive() {
         // console.log(result.title);
         // console.log(result.poster_path);
         let imgURL = "https://image.tmdb.org/t/p/w300" + result.poster_path;
+        let titmovie = result.title;
+
+        let overview = result.overview;
+
+        if (overview.length >= 70) {
+          overview = result.overview.substring(1, 71) + "...";
+        }
+
+        // console.log(overview);
 
         // img
         $(".images").append(
-          `<figure class="movie-img  "><div class="section_main card"><a href = "./detail.html?id=${result.id}"><img src="${imgURL}" class="card"></a>
-          <div class="movie-title"><p>${result.title}<br>${result.release_date}</p></div><figcaption><span>${result.overview}</span></figcaption></div></figure>
+          `<figure class="movie-img  "><div class="section_main card"><a href = "./detail.html?id=${result.id}"><img src="${imgURL}" alt="영화포스터" class="card"></a>
+          <div class="movie-title"><p>${titmovie}<br>${result.release_date}</p></div><figcaption class="movie-over">${overview}</figcaption></div></figure>
           
           `
         );

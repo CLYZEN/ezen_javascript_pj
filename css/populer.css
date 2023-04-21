@@ -16,10 +16,12 @@
 
 .movie-title {
   margin-top: 10px;
+  color: white;
 }
 
 .card {
-  background-color: rgba(206, 201, 201, 0.968);
+  background-color: rgb(9, 6, 38);
+  border: 1px solid white;
 }
 
 .section_main {
@@ -42,15 +44,12 @@ figure {
 }
 
 figure figcaption {
-  color: #1b1818;
+  color: #e3d8d8;
   bottom: 70px;
   opacity: 0;
   position: absolute;
   text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  width: 160px;
+  display: inline-block;
   height: 150px;
   transition: all 0.3s ease;
   margin: 10px;
@@ -77,4 +76,5 @@ figure:hover img {
 figure:hover figcaption {
   opacity: 1;
   transition: all 0.3s ease;
+  cursor: default;
 }
