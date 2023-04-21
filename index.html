@@ -137,7 +137,7 @@
                     <section class="poster_section">
                         <div class="container row">
                             <div class="col-md-3">
-                                <a href="./populer.html">
+                                <a href="./populer.html" target="_blank">
                                     <h3>현재 인기순</h3>
                                 </a>
                                 <hr>
@@ -146,7 +146,7 @@
                                 </swiper-container>
                             </div>
                             <div class="col-md-3">
-                                <a href="./now_playing.html">
+                                <a href="./now_playing.html" target="_blank">
                                     <h3>현재 상영중</h3>
                                 </a>
                                 <hr>
@@ -155,7 +155,7 @@
                                 </swiper-container>
                             </div>
                             <div class="col-md-3">
-                                <a href="./top_rated.html">
+                                <a href="./top_rated.html" target="_blank">
                                     <h3>최고평점</h3>
                                 </a>
                                 <hr>
@@ -164,7 +164,7 @@
                                 </swiper-container>
                             </div>
                             <div class="col-md-3">
-                                <a href="./upcoming.html">
+                                <a href="./upcoming.html" target="_blank">
                                     <h3>개봉 예정</h3>
                                 </a>
                                 <hr>
@@ -198,28 +198,39 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
             loop: true,
-            loopAdditionalSlides: 1
+            loopAdditionalSlides: 1,
         });
 
         var swiper1 = new Swiper(".mySwiper1", {
             loop: true,
-            loopAdditionalSlides: 1
+            loopAdditionalSlides: 1,
+            autoplay: true,
+            autoplay: {
+                delay: 5000,
+            },
+
         });
 
         var swiper2 = new Swiper(".mySwiper2", {
             loop: true,
-            loopAdditionalSlides: 1
+            loopAdditionalSlides: 1,
+            autoplay: true, //자동 재생 여부
+
         });
 
 
         var swiper3 = new Swiper(".mySwiper3", {
             loop: true,
-            loopAdditionalSlides: 1
+            loopAdditionalSlides: 1,
+            autoplay: true, //자동 재생 여부
+
         });
 
         var swiper4 = new Swiper(".mySwiper4", {
             loop: true,
-            loopAdditionalSlides: 1
+            loopAdditionalSlides: 1,
+            autoplay: true, //자동 재생 여부
+
         });
 
 
