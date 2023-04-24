@@ -4,10 +4,6 @@
   margin: -10px;
 }
 
-.average {
-  font-family: ;
-}
-
 .images {
   display: flex;
   justify-content: center;
@@ -46,6 +42,8 @@ body {
   border-radius: 50%;
   width: 34px;
   height: 34px;
+  top: 3px;
+  left: 3px;
   text-align: center;
   line-height: 25px;
   background-color: rgb(12, 252, 184);
