@@ -48,11 +48,15 @@
     <!-- CSS Load -->
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/index.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 
 <body>
     <!-- 제이쿼리 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <!-- 요소에 data-include-path="#" 추가 시 해당 경로의 html 요소만 불러옴 header footer 사용-->
     <!-- <script>
         window.addEventListener('load', function () {
@@ -189,10 +193,11 @@
             </div>
         </footer>
     </div>
-    <!-- swiper js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <!-- js -->
     <script src="./js/index.js"></script>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
     <script>
         var swiper = new Swiper(".mySwiper", {
             loop: true,
@@ -200,13 +205,13 @@
         });
 
         var swiper1 = new Swiper(".mySwiper1", {
-            loop: true,
-            loopAdditionalSlides: 1,
-            autoplay: true,
-            autoplay: {
-                delay: 5000,
+            autoplay: {  // 자동 슬라이드 설정 , 비 활성화 시 false
+                delay: 3000,   // 시간 설정
+                disableOnInteraction: false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
             },
-
+            loopAdditionalSlides: 1, // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
+            loop: true, // 슬라이드 반복 여부
+            slidesPerView: 'auto',
         });
 
         var swiper2 = new Swiper(".mySwiper2", {

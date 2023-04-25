@@ -41,6 +41,7 @@ function getPopularMoive() {
                 trailerKey.url = videoURL
 
                 $(".trailer_div > .mySwiper").append(`
+                
                   <swiper-slide>
                     <iframe width="640px" height="360px"
                     src="${videoURL}"
