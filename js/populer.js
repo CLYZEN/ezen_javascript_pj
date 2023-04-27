@@ -28,7 +28,7 @@ function getPopularMoive() {
         let overview = result.overview;
 
         if (overview.length >= 70) {
-          overview = result.overview.substring(1, 71) + "...";
+          overview = result.overview.substring(0, 71) + "...";
         }
 
         // console.log(overview);
