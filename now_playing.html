@@ -177,7 +177,7 @@
             let overview = result.overview;
 
             if (overview.length >= 75) {
-              overview = result.overview.substring(1, 75) + "...";
+              overview = result.overview.substring(0, 75) + "...";
             }
 
             $(".images").append(

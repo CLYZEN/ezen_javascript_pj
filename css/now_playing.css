@@ -2,10 +2,12 @@
 
 ol {
   list-style: none;
+  padding-top: 20px;
 }
 
 .images {
   width: 100%;
+  height: 1900px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -14,13 +16,13 @@ ol {
 
 .images > .sec {
   width: 200px;
-  height: 390px;
+  /* height: 390px; */
   padding-left: 10px;
 }
 
 .movie_list {
   width: 180px;
-  height: 390px;
+  /* height: 390px; */
 }
 
 .images > .sec > .movie_list > .movie_img > img {
@@ -65,5 +67,5 @@ ol {
 .movie_title:hover {
   color: #fff;
   text-decoration: none;
-  opacity: 100;
+  opacity: 1;
 }
